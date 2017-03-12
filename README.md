@@ -6,7 +6,7 @@ some snippet for sublime
 
 ## Snippets
 **ngctrl**
-```
+```javascript
 (function(){
     var module, moduleName = '${1: ngModule}',
         ctrlName = '${2: controllerName}';
@@ -25,7 +25,7 @@ some snippet for sublime
 })();
 ```
 **ngdirect**
-```
+```javascript
 (function(){
     var module, moduleName = '${1: ngModule}',
         factoryName = '${2: directiveName}';
@@ -44,7 +44,7 @@ some snippet for sublime
 })();
 ```
 **ngfac**
-```
+```javascript
 (function(){
     var module, moduleName = '${1: ngModule}',
         factoryName = '${2: factoryName}';
