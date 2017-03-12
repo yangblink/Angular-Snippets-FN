@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+(function(){
+	var module, moduleName = '${1: ngModule}',
+		factoryName = '${2: directiveName}';
+	try{
+		module = angular.module(moduleName, []);
+	}catch(e){
+		module = angular.module(moduleName)
+	}
+	
+	module.directive(factoryName, ${2: directiveName});
+
+	function ${2: directiveName}{
+		${3:}
+	}
+
+})();
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ngdirect</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+	<description>angular.js</description>
+</snippet>
