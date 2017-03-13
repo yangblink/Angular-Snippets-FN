@@ -1,17 +1,17 @@
 <snippet>
 	<content><![CDATA[
 (function(){
-	var module, moduleName = '${1: ngModule}',
-		factoryName = '${2: directiveName}';
+	var module, moduleName = '${1:ngModule}',
+		factoryName = '${2:directiveName}';
 	try{
 		module = angular.module(moduleName, []);
 	}catch(e){
 		module = angular.module(moduleName)
 	}
 	
-	module.directive(factoryName, ${2: directiveName});
+	module.directive(factoryName, ${2:directiveName});
 
-	function ${2: directiveName}{
+	function ${2:directiveName}{
 		${3:}
 	}
 
