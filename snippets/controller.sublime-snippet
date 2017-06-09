@@ -4,14 +4,14 @@
 	var module, moduleName = '${1:ngModule}',
 		ctrlName = '${2:controllerName}';
 	try{
-		module = angular.module(moduleName, []);
-	}catch(e){
 		module = angular.module(moduleName)
+	}catch(e){
+		module = angular.module(moduleName, []);
 	}
 
 	module.controller(ctrlName, ${2:controllerName});
 
-	function ${2:controllerName}{
+	function ${2:controllerName}() {
 		${3:}
 	}
 
