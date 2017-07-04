@@ -1,9 +1,6 @@
 <snippet>
 	<content><![CDATA[
 <div class="row content-scetion">
-    <div class="col-sm-2">
-    </div>
-
     <div class="col-sm-8">
         <form novalidate class="col-sm-8" name="searchForm">
             <div class="input-group">
@@ -16,26 +13,21 @@
             </div>
         </form>
     </div>
-    <div class="col-sm-2 text-right">
-        <div class="btn-group">
-            <button class="btn btn-warning" ng-click="$dismiss()">关闭</button>
-        </div>
-    </div>
 </div>
 <div class="table-responsive content-scetion">
-    <table table-thead-fixed class="table table-hover table-certificates">
+    <table table-thead-fixed class="table table-hover table-bordered">
         <thead>
             <tr>
-                <th>标题</th>
+                <th>序号</th>
                 <th>类别</th>
                 <th>操作</th>
             </tr>
         </thead>
         <tbody>
-            <tr current-page="paginationOptions.currentPage" total-items="paginationOptions.count" dir-paginate="items in series.list | itemsPerPage:paginationOptions.pageSize">
-                <td>{{items.title}}</td>
-                <td>{{items.newsType | newsDetailType}}</td>
-                <td><a ng-click="series.select(items)">选取</a></td>
+            <tr current-page="paginationOptions.currentPage" total-items="paginationOptions.count" dir-paginate="item in ctrl.list | itemsPerPage:paginationOptions.pageSize">
+                <td>{{$index + 1}}</td>
+                <td>{{item.newsType}}</td>
+                <td><a>选取</a></td>
             </tr>
         </tbody>
     </table>
