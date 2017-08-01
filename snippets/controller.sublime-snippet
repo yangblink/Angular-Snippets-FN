@@ -12,7 +12,12 @@
 	module.controller(ctrlName, ${2:controllerName});
 
 	function ${2:controllerName}() {
-		${3:}
+		var vm = this;
+		vm.paginationOptions = {
+		    currentPage: 1,
+		    pageSize: 20,
+		    count: 0
+		};
 	}
 
 })();

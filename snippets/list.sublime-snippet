@@ -24,7 +24,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr current-page="paginationOptions.currentPage" total-items="paginationOptions.count" dir-paginate="item in ctrl.list | itemsPerPage:paginationOptions.pageSize">
+            <tr current-page="ctrl.paginationOptions.currentPage" total-items="ctrl.paginationOptions.count" dir-paginate="item in ctrl.list | itemsPerPage: ctrl.paginationOptions.pageSize">
                 <td>{{$index + 1}}</td>
                 <td>{{item.newsType}}</td>
                 <td><a>选取</a></td>
@@ -32,7 +32,7 @@
         </tbody>
     </table>
     <div>
-        <dir-pagination-controls max-size="10" direction-links="true" on-page-change="search()" boundary-links="false" class="pull-right"></dir-pagination-controls>
+        <dir-pagination-controls max-size="10" direction-links="true" on-page-change="ctrl.search()" boundary-links="false" class="pull-right"></dir-pagination-controls>
     </div>
 </div>
 ]]></content>
